@@ -14,16 +14,16 @@ namespace Company {
             this.surName = surName;
         }
 
-        public void setFirstName(string firstName) {
+        public void SetFirstName(string firstName) {
             this.firstName = firstName;
         }
-        public void setSurName(string surName) {
+        public void SetSurName(string surName) {
             this.surName = surName;
         }
-        public string getFirstName() {
+        public string GetFirstName() {
             return firstName;
         }
-        public string getSurName() {
+        public string GetSurName() {
             return surName;
         }
     }

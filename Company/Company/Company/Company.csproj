@@ -45,9 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Finances\Employees\Employee.cs" />
+    <Compile Include="Finances\Employees\Employees.cs" />
     <Compile Include="Finances\Employees\Enumerations\ContractType.cs" />
     <Compile Include="Finances\Employees\Operation.cs" />
     <Compile Include="Finances\Employees\Person.cs" />
+    <Compile Include="Finances\Employees\Security.cs" />
     <Compile Include="Finances\Employees\Structures\Salary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

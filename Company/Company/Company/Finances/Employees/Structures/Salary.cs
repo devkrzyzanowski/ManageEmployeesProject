@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Finances.Finances.Employees;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,14 +18,28 @@ namespace Company.Finances.Employees.Structures {
             this.other = other;
         }
 
+        private bool CheckUser() {
+            if (Security.LogIn()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
         public void SetBasic(float value) {
-            this.basic = value;
+            if (CheckUser()) {
+                this.basic = value;
+            }
         }
         public void SetBonus(float value) {
-            this.bonus = value;
+            if (CheckUser()) {
+                this.bonus = value;
+            }
         }
         public void SetOther(float value) {
-            this.other = value;
+            if (CheckUser()) {
+                this.other = value;
+            }
         }
         public float GetBasic() {
             return basic;

@@ -14,19 +14,26 @@ namespace Company.Finances.Employees {
             private float holidayBonus = 1000;
             private List<Operation> operations = new List<Operation>();
 
-            public Employee(string firstName, string lastName, float basic, float bonus, float other) : base(firstName, lastName) {
+        public Employee(string firstName, string lastName, float basic, float bonus, float other) : base(firstName, lastName) {
                 this.salary.SetBasic(basic);
                 this.salary.SetBonus(bonus);
                 this.salary.SetOther(other);
                 this.contractType = ContractType.FullTime;
             }
 
-            public Employee(string firstName, string lastName) : base(firstName, lastName) {
+        
+
+        public Employee(string firstName, string lastName) : base(firstName, lastName) {
                 this.salary.SetBasic(0f);
                 this.salary.SetBonus(0f);
                 this.salary.SetOther(0f);
                 this.contractType = ContractType.FullTime;
             }
+
+        public static Employee CreateEmployee(string firstName,string surname) {
+            Employee e = new Employee(firstName, surname);
+        }
+
 
             public void PrintEmployeeOperationsList() {
                 foreach (Operation o in operations) {
@@ -60,6 +67,14 @@ namespace Company.Finances.Employees {
             public ContractType GetContractType() {
                 return contractType;
             }
+
+            public List<Operation> GetOperations() {
+            return operations;
+            }
+
+            public void setOperations(List<Operation> operations) {
+            this.operations = operations;
+        }
 
             public string GetContractTypeAsString() {
                 switch (contractType) {
